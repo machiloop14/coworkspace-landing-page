@@ -26,27 +26,18 @@ const Gallery = () => {
           </p>
         </div>
         <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div className="aspect-[4/3] rounded-xl overflow-hidden">
-            <img
-              src={images[0].url}
-              alt={images[0].alt}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="aspect-[4/3] rounded-xl overflow-hidden">
-            <img
-              src={images[1].url}
-              alt={images[1].alt}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="aspect-[4/3] rounded-xl overflow-hidden">
-            <img
-              src={images[2].url}
-              alt={images[2].alt}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {images.map((image, index) => (
+            <div
+              className="aspect-[4/3] rounded-xl overflow-hidden"
+              key={index}
+            >
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
