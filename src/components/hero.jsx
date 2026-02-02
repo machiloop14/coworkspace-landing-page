@@ -1,29 +1,40 @@
 import React from "react";
-import "./hero.css";
-import { MdArrowForward } from "react-icons/md";
+import { LuArrowRight } from "react-icons/lu";
 
 const Hero = () => {
   return (
-    <div id="container">
-      {/* <img src="https://shorturl.at/D7qje" id="bg-image" /> */}
-      <div id="bg-overlay"></div>
-      <div id="hero-content" className="flex gap-7 flex-col">
-        <h1 className="text-7xl text-white font-bold">Your Space to Thrive</h1>
-        <p className="text-white/90 text-2xl">
-          Join a community of innovators, creators, and entrepreneurs in our
-          premium co-working spaces designed for productivity and collaboration.
-        </p>
-        <div className="flex gap-4">
-          <button className="bg-blue-600 px-8 py-4 rounded-lg text-white font-semibold flex items-center gap-2">
-            Book a Tour
-            <MdArrowForward size={20} className="mt-1" />
-          </button>
-          <button className="bg-white/10 backdrop-blur-sm px-8 py-4 rounded-lg text-white font-semibold ">
-            View Plans
-          </button>
+    <section className="relative min-h-screen flex items-center">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1626187777040-ffb7cb2c5450?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb3dvcmtpbmclMjBzcGFjZXxlbnwxfHx8fDE3Njk1MDU5OTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          alt="Modern coworking space"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl">
+          <h1 className="text-5xl md:text-7xl mb-6 text-white">
+            Your Space to Thrive
+          </h1>
+          <p className="text-xl md:text-2xl text-white/90 mb-8">
+            Join a community of innovators, creators, and entrepreneurs in our
+            premium co-working spaces designed for productivity and
+            collaboration.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <button className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center gap-2 transition-colors">
+              Book a Tour
+              <LuArrowRight className="w-5 h-5" />
+            </button>
+            <button className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm rounded-lg transition-colors">
+              View Plans
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
