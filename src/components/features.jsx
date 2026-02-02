@@ -18,37 +18,37 @@ const zapIcon = <LuZap className="text-blue-600 " size={30} />;
 
 const features = [
   {
-    icon: wifiIcon,
+    icon: LuZap,
     title: "High-Speed Internet",
     description:
       "Lightning-fast fiber optic internet with backup connections to keep you online.",
   },
   {
-    icon: coffeeIcon,
+    icon: LuCoffee,
     title: "Premium Amenities",
     description:
       "Complimentary coffee, tea, and snacks to fuel your productivity throughout the day.",
   },
   {
-    icon: usersIcon,
+    icon: LuWifi,
     title: "Networking Events",
     description:
       "Regular community events to connect with fellow members and grow your network.",
   },
   {
-    icon: shieldIcon,
+    icon: LuUsers,
     title: "24/7 Security",
     description:
       "Round-the-clock security and secure access control for your peace of mind.",
   },
   {
-    icon: clockIcon,
+    icon: LuShield,
     title: "Flexible Access",
     description:
       "24/7 access to your workspace whenever inspiration strikes, day or night.",
   },
   {
-    icon: zapIcon,
+    icon: LuClock,
     title: "Power Backup",
     description:
       "Uninterrupted power supply with backup generators to keep you working.",
@@ -57,45 +57,34 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="px-6  bg-gray-50 pt-24 mb-4">
-      <div className="text-center flex flex-col gap-4">
-        <h2 className="text-5xl font-semibold">
-          Everything You Need to Succeed
-        </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Our co-working spaces are equipped with all the amenities and services
-          you need to do your best work.
-        </p>
-      </div>
-      <div className="grid grid-cols-3 justify-between gap-8 pb-20 pt-14">
-        {/* <div
-          id="card"
-          className="flex flex-col bg-white rounded-xl py-8 px-8 gap-3 shadow-sm"
-        >
-          <div className="px-3 py-3 bg-blue-100 rounded-lg w-fit">
-            <MdWifi className="text-blue-600 " size={30} />
-          </div>
-          <p className="font-medium text-xl">High-Speed Internet</p>
-          <p className="text-gray-600">
-            Lightning-fast fiber optic internet with backup connections to keep
-            you online.
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl mb-4">
+            Everything You Need to Succeed
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our co-working spaces are equipped with all the amenities and
+            services you need to do your best work.
           </p>
-        </div> */}
-        {features.map((features, index) => (
-          <div
-            key={index}
-            id="card"
-            className="flex flex-col bg-white rounded-xl py-8 px-8 gap-3 shadow-sm"
-          >
-            <div className="px-3 py-3 bg-blue-100 rounded-lg w-fit">
-              {features.icon}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <feature.icon className="w-7 h-7 text-blue-600" />
+              </div>
+              <h3 className="text-xl mb-3">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
             </div>
-            <p className="font-medium text-xl">{features.title}</p>
-            <p className="text-gray-600">{features.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
