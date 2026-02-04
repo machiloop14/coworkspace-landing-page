@@ -3,7 +3,7 @@ import { LuCheck } from "react-icons/lu";
 const plans = [
   {
     name: "Day Pass",
-    price: "29",
+    price: "2k",
     period: "per day",
     description: "Perfect for occasional visits",
     features: [
@@ -17,7 +17,7 @@ const plans = [
   },
   {
     name: "Flex Desk",
-    price: "299",
+    price: "45k",
     period: "per month",
     description: "For flexible professionals",
     features: [
@@ -34,7 +34,7 @@ const plans = [
   },
   {
     name: "Private Office",
-    price: "799",
+    price: "90k",
     period: "per month",
     description: "Your own dedicated space",
     features: [
@@ -84,7 +84,7 @@ const Pricing = () => {
                 {plan.description}
               </p>
               <div className="mb-6">
-                <span className="text-5xl">${plan.price}</span>
+                <span className="text-5xl">N{plan.price}</span>
                 <span
                   className={`ml-2 ${plan.highlighted ? "text-blue-100" : "text-gray-600"}`}
                 >

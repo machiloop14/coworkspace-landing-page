@@ -20,11 +20,11 @@ const Contact = () => {
                 <div>
                   <h3 className="font-medium mb-1">Visit Us</h3>
                   <p className="text-gray-300">
-                    123 Innovation Street
+                    No. 91 Sango-Ojoo Road
                     <br />
-                    Downtown District
+                    Opposite ICC University of Ibadan
                     <br />
-                    San Francisco, CA 94102
+                    Ibadan 200283, Nigeria
                   </p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+234 810 537 2429</p>
                 </div>
               </div>
 

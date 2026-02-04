@@ -1,24 +1,24 @@
 const testimonials = [
   {
-    name: "Sarah Chen",
+    name: "Justice Ozaveshe",
     role: "Founder, TechStart Inc.",
     content:
       "This co-working space has been instrumental in growing my startup. The community is incredibly supportive and the amenities are top-notch.",
-    avatar: "SC",
+    avatar: "JO",
   },
   {
-    name: "Michael Roberts",
+    name: "Owen Joseph",
     role: "Freelance Designer",
     content:
       "I've tried many co-working spaces, but this one stands out. The atmosphere is perfect for creativity and the facilities are always well-maintained.",
-    avatar: "MR",
+    avatar: "OJ",
   },
   {
-    name: "Emma Thompson",
+    name: "Abigail Pamilerin",
     role: "Remote Marketing Manager",
     content:
       "The flexible access and professional environment have made my remote work experience so much better. Highly recommend!",
-    avatar: "ET",
+    avatar: "AP",
   },
 ];
 
