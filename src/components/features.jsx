@@ -66,6 +66,7 @@ const Features = () => {
       // opacity: 0.5,
       y: 100,
       reversed: true,
+      ease: "power1.in",
       // borderRadius: "100%",
       scrollTrigger: {
         trigger: ".feature",
