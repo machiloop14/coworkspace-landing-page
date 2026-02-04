@@ -1,3 +1,6 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React from "react";
 
 import {
@@ -15,6 +18,8 @@ const usersIcon = <LuUsers className="text-blue-600 " size={30} />;
 const shieldIcon = <LuShield className="text-blue-600 " size={30} />;
 const clockIcon = <LuClock className="text-blue-600 " size={30} />;
 const zapIcon = <LuZap className="text-blue-600 " size={30} />;
+
+gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
@@ -56,6 +61,20 @@ const features = [
 ];
 
 const Features = () => {
+  useGSAP(() => {
+    gsap.from(".feature", {
+      // opacity: 0.5,
+      y: 100,
+      reversed: true,
+      // borderRadius: "100%",
+      scrollTrigger: {
+        trigger: ".feature",
+        start: "top 80%",
+        scrub: true,
+      },
+    });
+  });
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
@@ -73,7 +92,7 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow feature"
             >
               <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <feature.icon className="w-7 h-7 text-blue-600" />
